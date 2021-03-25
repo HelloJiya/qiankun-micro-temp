@@ -1,0 +1,56 @@
+/* 改变主题色变量 */
+$--color-primary: #3265DE;
+$--color-white: #ffffff !default;
+$--color-primary-light-1: mix($--color-white, $--color-primary, 10%) !default; /* 53a8ff */
+$--color-primary-light-2: mix($--color-white, $--color-primary, 20%) !default; /* 66b1ff */
+$--color-primary-light-3: mix($--color-white, $--color-primary, 30%) !default; /* 79bbff */
+$--color-primary-light-4: mix($--color-white, $--color-primary, 40%) !default; /* 8cc5ff */
+$--color-primary-light-5: mix($--color-white, $--color-primary, 50%) !default; /* a0cfff */
+$--color-primary-light-6: mix($--color-white, $--color-primary, 60%) !default; /* b3d8ff */
+$--color-primary-light-7: mix($--color-white, $--color-primary, 70%) !default; /* c6e2ff */
+$--color-primary-light-8: mix($--color-white, $--color-primary, 80%) !default; /* d9ecff */
+$--color-primary-light-9: mix($--color-white, $--color-primary, 90%) !default; /* ecf5ff */
+
+$--color-success: #59BC13 !default;
+$--color-warning: #ED8827 !default;
+$--color-danger: #EE4B38 !default;
+$--color-info: #909399 !default;
+
+
+/* 改变 icon 字体路径变量，必需 */
+$--font-path: '~element-ui/lib/theme-chalk/fonts';
+
+@import "~element-ui/packages/theme-chalk/src/index";
+
+
+$--color-text-primary:#3C4353;
+
+// sidebar
+$saas-menu-text:$--color-text-primary; // 菜单颜色
+$saas-menu-active-text:$--color-primary; // 子菜单高亮字体颜色
+$saaa-sub-active-text:$--color-text-primary; // 父菜单高亮颜色
+
+$saas-menu-bg:#ffffff; // 菜单整体背景色
+$saas-menu-hover:#EBEFFB; // 未选中菜单鼠标悬浮颜色
+
+$saas-sub-menu-bg:#ffffff; // 选中菜单背景色
+
+$saas-sidebar-width: 200px; // 菜单宽度
+
+// 主要颜色
+$saas-logo-height: 68px;
+$saas-border-line: #DCDFE6;
+$saas-split-line: #E8E8E8;
+$saas-main-red: #EE4B38;
+
+// the :export directive is the magic sauce for webpack
+// https://www.bluematador.com/blog/how-to-share-variables-between-js-and-sass
+:export {
+  saas-menu-text: $saas-menu-text;
+  saas-menu-active-text: $saas-menu-active-text;
+  saaa-sub-active-text: $saaa-sub-active-text;
+  saas-menu-bg: $saas-menu-bg;
+  saas-menu-hover: $saas-menu-hover;
+  saas-sub-menu-bg: $saas-sub-menu-bg;
+  saas-sidebar-width: $saas-sidebar-width;
+}

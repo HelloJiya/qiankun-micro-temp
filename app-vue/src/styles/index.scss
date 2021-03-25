@@ -1,0 +1,130 @@
+@import './variables.scss';
+@import './sidebar.scss';
+@import './mixin.scss';
+@import './transition.scss';
+@import './main.scss';
+
+
+*{
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  height: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
+}
+
+label {
+  font-weight: 700;
+}
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+#app {
+  height: 100%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+a,
+a:focus,
+a:hover {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+}
+
+div:focus {
+  outline: none;
+}
+
+.clearfix {
+  &:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+  }
+}
+
+// main-container global css
+.app-container {
+  padding: 20px;
+  height: 100%;
+  overflow: auto;
+}
+p{
+  margin: 0;
+}
+// 
+.dialog-form {
+  .el-form-item {
+    margin-bottom: 20px;
+  }
+  &.moreItem {
+    padding-top: 20px;
+  }
+}
+
+.common-scroll {
+  &::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  &::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0);
+    border-radius: 6px;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 6px;
+    background:rgba(144, 147, 153, 0.3);
+    transition: 0.3s background-color;
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background: rgba(144, 147, 153, 0.5);
+  }
+}
+
+.saas-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.saas-switch {
+  &.el-switch {
+    height: 28px;
+    line-height: 28px;
+    .el-switch__core {
+      height: 28px;
+      border-radius: 14px;
+      &:after {
+        width: 24px;
+        height: 24px;
+      }
+    }
+    &.is-checked .el-switch__core::after {
+      margin-left: -25px !important
+    }
+  }
+}
+
+// main-container global css
